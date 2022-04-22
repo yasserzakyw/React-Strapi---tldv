@@ -13,7 +13,10 @@ const useVideos = () => {
       .then((response) => {
         setVideosList(response.data.data);
       })
-      .catch((error) => console.warn("error:>>>", error.response));
+      .catch((error) => {
+        setIsFetching(false);
+        console.warn("error:>>>", error.response);
+      });
   };
 
   const getVideoDetails = async (videoId) => {
@@ -21,7 +24,6 @@ const useVideos = () => {
   };
 
   useEffect(() => {
-    setIsFetching(true);
     getVideosList();
   }, []);
 

@@ -15,31 +15,43 @@ const VideosList = () => {
     <>
       {isFetching && <LoadingSpinner />}
 
-      {!isFetching && (
-        <div className="videos-container flex wrap justify--center">
-          {videosList.map((video, index) => {
-            const { id, attributes } = video;
-            const { url, title, description } = attributes;
+      {!isFetching && !videosList.length && (
+        <>
+          <h2>Nothing to display here. 🤷🏻‍♂️</h2>
+          <h3>
+            First, please go setup the database from the Admin panel, and come
+            back later 😉
+          </h3>
+        </>
+      )}
 
-            return (
-              <Link className="video-card" to={`/video/${id}`} key={id}>
-                <Video
-                  muted={true}
-                  controls={false}
-                  autoPlay={false}
-                  preload="metedata"
-                  src={`http://localhost:1337/${url}`}
-                />
+      {!isFetching && videosList && (
+        <>
+          <div className="videos-container flex wrap justify--center">
+            {videosList.map((video, index) => {
+              const { id, attributes } = video;
+              const { url, title, description } = attributes;
 
-                <div className="video-information">
-                  <h3 className="video-title">{title}</h3>
+              return (
+                <Link className="video-card" to={`/video/${id}`} key={id}>
+                  <Video
+                    muted={true}
+                    controls={false}
+                    autoPlay={false}
+                    preload="metedata"
+                    src={`http://localhost:1337/${url}`}
+                  />
 
-                  <h4 className="video-description">{description}</h4>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+                  <div className="video-information">
+                    <h3 className="video-title">{title}</h3>
+
+                    <h4 className="video-description">{description}</h4>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </>
       )}
     </>
   );
