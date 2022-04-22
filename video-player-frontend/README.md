@@ -65,7 +65,7 @@ This section is the Front-end (_clinet side_) of the application.
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 5. I order to successfully call the API and fetch data, you to have the backend server up and running.\
-   Please navigate to this [README](Navigate to backend README.md) file to know how to do that 😉
+   Please navigate to[Backend README](https://github.com/yasserzakyw/React-Strapi---tldv/blob/master/video-player-backend/README.md) to know how to do that 😉
 
 \
 The page will reload when you make changes.\
