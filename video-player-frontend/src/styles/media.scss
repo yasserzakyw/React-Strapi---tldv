@@ -1,0 +1,59 @@
+// Screen Style
+@media #{$media-screen} {
+}
+
+// Display Style
+@media #{$media-display} {
+}
+
+// Tablet Style
+@media #{$media-tablet} {
+  body {
+    .header-wrapper {
+      .logo {
+        max-width: 50px;
+        content: url("../../src/assets/logo.png");
+        + .material-icons {
+          color: $primary;
+        }
+      }
+    }
+    .home-container {
+      .videos-container {
+        .video-card {
+          width: calc(50% - 2rem);
+        }
+      }
+    }
+
+    .video-detail-container {
+      width: auto;
+      video {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Mobile Style
+@media #{$media-mobile} {
+  html {
+    body {
+      font-size: 1rem;
+      .home-container {
+        .videos-container {
+          .video-card {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPhone 6 Plus Style
+@media #{$media-iPhone6-6Plus} {
+}
+
+@media #{$media-iPhone5} {
+}

@@ -1,0 +1,14 @@
+.video-detail-container {
+  width: 50%;
+  margin: auto;
+  .video-card {
+    background-color: white;
+    border: dashed 1px #000;
+    border-radius: 15px;
+    padding: 0.2rem;
+  }
+  video {
+    width: 100%;
+    border-radius: 15px;
+  }
+}

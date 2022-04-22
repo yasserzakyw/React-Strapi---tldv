@@ -15,6 +15,8 @@ You can also click on the video card to navigate to another page, where you can 
 
 ## Where did the videos come from?
 
-The fetched data is a result of an API request, created by [Backend side of this application](https://nodejs.org/en/).
+The fetched data is a result of an API request, created by Backend side of this application.
 
 #
+
+In case of any questions, you know [where to find me 👨🏻‍💻](http://yasserzaky.xyz/)
