@@ -9,7 +9,7 @@ const useVideos = () => {
     setIsFetching(true);
 
     return await axios
-      .get("http://192.168.1.229:1337/api/videos")
+      .get("http://localhost:1337/api/videos")
       .then((response) => {
         setVideosList(response.data.data);
       })
